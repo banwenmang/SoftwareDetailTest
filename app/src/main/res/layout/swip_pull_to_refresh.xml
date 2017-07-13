@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              xmlns:stick="http://schemas.android.com/apk/res-auto"
+                                              android:id="@+id/swipeLayout"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent">
+
+    <com.example.administrator.softwaredetailtest.view.StickyNavLayout
+        android:id="@+id/id_stick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        stick:isStickNav="false"
+        stick:stickOffset="48dp">
+
+        <LinearLayout
+            android:id="@+id/id_stickynavlayout_topview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="605dp"
+                    android:layout_marginBottom="48dp"
+                    android:background="#656599">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_launcher"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_open_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/rl_top"
+                    android:layout_marginTop="-48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="打开软件"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="软件不会用？"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="功能入口"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/id_stickynavlayout_indicator"
+            style="@style/TabLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:tag="tl_activities"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="#999"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.example.administrator.softwaredetailtest.view.StickyNavLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
