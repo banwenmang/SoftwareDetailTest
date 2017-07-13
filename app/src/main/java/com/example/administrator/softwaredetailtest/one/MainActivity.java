@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSecondDefaultHeight = dp2px(this, 60);
         initListener();
 
-        startActivity(new Intent(this, SwipeRefreshLayoutActivity.class));
+        //startActivity(new Intent(this, SwipeRefreshLayoutActivity.class));
     }
 
     private void initListener() {
